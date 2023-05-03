@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "http://localhost:3001",
+  "proxy": "https://gleeful-starlight-cbed15.netlify.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
