@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "https://mern-crud-app-backend-cnu3.onrender.com/",
+  "proxy": "https://mern-crud-app-backend-cnu3.onrender.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
