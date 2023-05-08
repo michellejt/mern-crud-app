@@ -5,6 +5,8 @@ require('dotenv').config();
 
 const app = express();
 
+const BASE_URL = process.env.BASE_URL
+
 //middleware to check http requests going in and out
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));``
@@ -23,7 +25,7 @@ const postSchema =mongoose.Schema({
 const Post = mongoose.model("Post", postSchema);
 
 //api routes
-app.get("/", (req, res) => {
+app.get(`${BASE_URL}/`, (req, res) => {
     res.send("Express is here")
 })
 
@@ -36,7 +38,7 @@ app.post("/create", (req, res)=>{
    .catch(err => console.log(err))
 });
 
-app.get("/posts", (req, res) => {
+app.get(`${BASE_URL}/posts`, (req, res) => {
     Post.find()
     .then((items)=> res.json(items))
     .catch((err) => console.log(err))
