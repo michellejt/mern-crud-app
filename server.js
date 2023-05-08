@@ -25,7 +25,7 @@ const postSchema =mongoose.Schema({
 const Post = mongoose.model("Post", postSchema);
 
 //api routes
-app.get(`${BASE_URL}/`, (req, res) => {
+app.get('/', (req, res) => {
     res.send("Express is here")
 })
 
