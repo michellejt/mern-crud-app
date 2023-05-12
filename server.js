@@ -23,7 +23,7 @@ const postSchema =mongoose.Schema({
 })    
 
 const Post = mongoose.model("Post", postSchema);
-
+app.use(cors()) 
 //api routes
 app.get('/', (req, res) => {
     res.send("Express is here")
